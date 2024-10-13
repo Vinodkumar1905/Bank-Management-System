@@ -36,8 +36,13 @@ public class Login extends JFrame implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Wrong Password");
                     }
                 }
-                else{
-                    JOptionPane.showMessageDialog(null,"Account does not exist");
+                else{  String[] options = {"Open New"};
+                    var selection = JOptionPane.showOptionDialog(null, "Account does not exist", "Warning",
+                            0, 3, null, options, options[0]);
+                     if(selection == 0) {
+                        setVisible(false);
+                        new SighnUp().setVisible(true);
+                    }
                 }
             } catch (Exception ex) {
                 System.out.println(ex);
