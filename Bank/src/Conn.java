@@ -8,7 +8,7 @@ public class Conn {
     public Conn(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/vgb","root","pass");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+name_of_database,"root","pass");
             st= c.createStatement();
         }
         catch (Exception e){
