@@ -43,6 +43,7 @@ public class Login extends JFrame implements ActionListener {
                         setVisible(false);
                         new SighnUp().setVisible(true);
                     }
+                     cardField.setText("");
                 }
             } catch (Exception ex) {
                 System.out.println(ex);
